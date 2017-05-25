@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:PropertiesManager"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Background="#FF46997B">
+        <Button x:Name="button" Content="Add" Margin="0,141.169,78.073,138.236" HorizontalAlignment="Right" Width="96.341" Background="#FFF12E10"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="63.17,52.439,0,0" Text="Enter name" Background="#FF7EC194"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="63.17,96.829,0,0" Text="Enter location" Background="#FF7EC194"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="63.17,0,0,101.527" Width="120" Background="#FF7EC194" FontFamily="Enter type" VerticalAlignment="Bottom">
+            <ComboBoxItem Margin="2,0,-2,0" Height="21.961" Content="House"/>
+            <ComboBoxItem Content="Flat&#xD;&#xA;" Height="22.261"/>
+            <ComboBoxItem Content="Restaurant&#xA;" Height="22.261"/>
+            <ComboBoxItem Content="Pub&#xA;" Height="22.261"/>
+            <ComboBoxItem Content="Hotel&#xD;&#xA;" Height="19.995"/>
+        </ComboBox>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="63.17,138.13,0,157.87" Text="Area" Background="#FF7EC194"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="63.17,0,0,126.927" TextWrapping="Wrap" Text="Type" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlock_Copy" Margin="134.657,10,227.489,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37.439" Text="Add Property" FontFamily="Segoe WP" FontSize="16"/>
+
     </Grid>
 </Window>

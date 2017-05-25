@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PropertiesManager
+namespace PropertiesManager.Screens
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para Page3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page3 : Page
     {
-        public MainWindow()
+        public Page3()
         {
             InitializeComponent();
         }
