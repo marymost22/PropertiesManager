@@ -77,12 +77,19 @@ namespace AbstractProperty
         {
             return name;
         }
-        
-        
 
-        public void ModifyProperty() //Edits existing information about property, overwrites data in database.
+
+
+        public bool ModifyProperty(string name, string location, double area) //Edits existing information about property, overwrites data in database.
         {
-
+            if (name != null & location != null & value != 0)
+            { 
+                this.name = name;
+                this.location = location;
+                this.area = area;
+                return true;
+            }
+            return false;
         }
 
         public void DeleteProperty() //Removes information containing specified property from database, and not showing it anymore in the GUI.

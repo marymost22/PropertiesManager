@@ -20,9 +20,17 @@ namespace PropertiesManager.Screens
     /// </summary>
     public partial class Page2 : Page
     {
+
+        private Administrator;
+
         public Page2()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

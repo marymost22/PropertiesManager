@@ -54,17 +54,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Screens\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="ModifyProperty.xaml.cs">
+      <DependentUpon>ModifyProperty.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Page2.xaml.cs">
-      <DependentUpon>Page2.xaml</DependentUpon>
+    <Compile Include="Screens\AddAdministrator.xaml.cs">
+      <DependentUpon>AddAdministrator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Page3.xaml.cs">
-      <DependentUpon>Page3.xaml</DependentUpon>
+    <Compile Include="Screens\ModifyAdministrator.xaml.cs">
+      <DependentUpon>ModifyAdministrator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
+    <Compile Include="Screens\DeletePropertyWindow.xaml.cs">
+      <DependentUpon>DeletePropertyWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -86,19 +87,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Screens\Page1.xaml">
+    <Page Include="ModifyProperty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Page2.xaml">
+    <Page Include="Screens\AddAdministrator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Page3.xaml">
+    <Page Include="Screens\ModifyAdministrator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Window1.xaml">
+    <Page Include="Screens\DeletePropertyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
