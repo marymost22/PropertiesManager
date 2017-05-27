@@ -30,7 +30,7 @@ namespace AbstractProperty
         protected double totalIncome; // total income counted since creating property object in program 
         protected double totalOutcome; //total outcome counter since creating property object in program
 
-
+        
         protected Property()
         {
             name = "null";
@@ -87,13 +87,13 @@ namespace AbstractProperty
                 this.name = name;
                 this.location = location;
                 this.area = area;
+                Artificial_database.DummyClass.ModifyProperty(this);
                 return true;
             }
             return false;
         }
 
         public void DeleteProperty() //Removes information containing specified property from database, and not showing it anymore in the GUI.
-
         {
 
         }

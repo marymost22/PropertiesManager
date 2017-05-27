@@ -21,7 +21,6 @@ namespace PropertiesManager.Screens
     public partial class Page2 : Page
     {
 
-        private Administrator;
 
         public Page2()
         {

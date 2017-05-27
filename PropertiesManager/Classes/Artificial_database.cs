@@ -51,8 +51,14 @@ namespace Artificial_database
             }
         }
 
+        static public void AddProperty(Property prop)
+        {
+            Properties.Add(prop);
+        }
 
-        static public void AddProperty()
+        static public void AddProperty(string type, string name, double value, double area, string location, 
+                                        double waterExpenses, double lightExpenses, double gasExpenses,
+                                        double income, double outcome)
         {
             string type;
             string nam;
@@ -249,7 +255,17 @@ namespace Artificial_database
         }
 
 
+        static public bool DeleteProperty(Property prop)
+        {
+            Property toDelete = Properties.Find(property => property.getId() == prop.getId());
+            return (Properties.Remove(toDelete));
+        }
 
+        static public void ModifyProperty(Property prop)
+        {
+            DeleteProperty(prop);
+            AddProperty(prop);   
+        }
 
 
     }

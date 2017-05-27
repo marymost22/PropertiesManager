@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AbstractProperty;
+using Artificial_database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,29 @@ namespace PropertiesManager.Screens
         public Window1()
         {
             InitializeComponent();
+            foreach (Property property in DummyClass.Properties)
+            {
+                cbProperties.Items.Add(property.getName());
+            }
         }
+
+        private void btDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Property toDelete =(Property) cbProperties.SelectedItem;
+
+            if (!DummyClass.DeleteProperty(toDelete))
+            {
+                //TODO: Put red label showing the error
+            }
+        }
+
+        /*
+        private void comboBox_Load(object sender, SelectionChangedEventArgs e)
+        {
+            foreach (Property property in Artificial_database.DummyClass.Properties)
+            {
+                cbProperties.Items.Add(property.getName());
+            }
+        }*/
     }
 }

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Window1" Height="300" Width="300">
     <Grid>
-        <ComboBox x:Name="comboBox" Margin="45.025,87.146,0,0" VerticalAlignment="Top" Height="30.74" HorizontalAlignment="Left" Width="133.171"/>
-        <Button x:Name="button" Content="Delete property" HorizontalAlignment="Right" Margin="0,0,37.342,69.697" VerticalAlignment="Bottom" Width="130.609" Height="34.594" Background="#FFF12E10" FontFamily="Segoe WP Black"/>
-        <TextBlock x:Name="textBlock" Margin="86.731,26.414,52.522,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55.732"><Run Text="Please, sele"/><Run Text="ct property, which you would like to delete from below"/></TextBlock>
+        <ComboBox x:Name="cbProperties" Margin="45.025,87.146,0,0" VerticalAlignment="Top" Height="30.74" HorizontalAlignment="Left" Width="133.171" SelectionChanged="comboBox_SelectionChanged"> </ComboBox>
+        <Button x:Name="btDelete" Content="Delete property" HorizontalAlignment="Right" Margin="0,0,37.342,69.697" VerticalAlignment="Bottom" Width="130.609" Height="34.594" Background="#FFF12E10" FontFamily="Segoe WP Black" Click="btDelete_Click"/>
+        <TextBlock x:Name="label" Margin="86.731,26.414,52.522,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55.732"><Run Text="Please, sele"/><Run Text="ct property, which you would like to delete from below"/></TextBlock>
 
     </Grid>
 </Window>
