@@ -60,7 +60,7 @@ namespace Artificial_database
                                         double waterExpenses, double lightExpenses, double gasExpenses,
                                         double income, double outcome)
         {
-            string type;
+            string typ;
             string nam;
             double val;
             double ar;

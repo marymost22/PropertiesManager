@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PropertiesManager.Screens
 {
     /// <summary>
-    /// Lógica de interacción para Page3.xaml
+    /// Lógica de interacción para AddProperty.xaml
     /// </summary>
-    public partial class Page3 : Page
+    public partial class AddProperty : Page
     {
-        public Page3()
+        public AddProperty()
         {
             InitializeComponent();
         }

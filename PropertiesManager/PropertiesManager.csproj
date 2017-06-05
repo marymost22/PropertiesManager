@@ -55,8 +55,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Screens\AddProperty.xaml.cs">
+      <DependentUpon>AddProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LinkAdministrator.xaml.cs">
+      <DependentUpon>LinkAdministrator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\MainPageProperties.xaml.cs">
       <DependentUpon>MainPageProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MainPageUsers.xaml.cs">
+      <DependentUpon>MainPageUsers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\ModifyProperty.xaml.cs">
       <DependentUpon>ModifyProperty.xaml</DependentUpon>
@@ -73,8 +82,11 @@
     <Compile Include="Screens\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\AddProperty.xaml.cs">
-      <DependentUpon>AddProperty.xaml</DependentUpon>
+    <Compile Include="Screens\UnlinkAdministrator.xaml.cs">
+      <DependentUpon>UnlinkAdministrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DeleteAdministratorWindow.xaml.cs">
+      <DependentUpon>DeleteAdministratorWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -96,7 +108,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Screens\AddProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\LinkAdministrator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screens\MainPageProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\MainPageUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,7 +144,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\AddProperty.xaml">
+    <Page Include="Screens\UnlinkAdministrator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\DeleteAdministratorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

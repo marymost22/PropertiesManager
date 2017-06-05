@@ -1,4 +1,4 @@
-﻿<Page x:Class="PropertiesManager.Screens.Page1"
+﻿<Page x:Class="PropertiesManager.Screens.Login"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:PropertiesManager.Screens"
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="525"
-      Title="Page1">
+      Title="LogIn">
 
-    <Border Background="#FF009688" Width="350" Height="525">
+    <Border Background="#FF009688" Width="525" Height="350">
 
         <ContentControl HorizontalContentAlignment="Center"
 		VerticalContentAlignment="Center" 
@@ -48,8 +48,7 @@
 					VerticalAlignment="Center" 
 					HorizontalAlignment="Center" 
 					FontSize="12" Width="240" 
-					IsReadOnly="False"
-					BorderBrush="#00000000"  />
+					BorderBrush="#00000000"/>
 
                 <PasswordBox 
                     Name="tbPassword"

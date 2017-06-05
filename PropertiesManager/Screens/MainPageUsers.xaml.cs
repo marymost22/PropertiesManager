@@ -1,5 +1,4 @@
-﻿using AbstractProperty;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,36 +16,34 @@ using System.Windows.Shapes;
 namespace PropertiesManager.Screens
 {
     /// <summary>
-    /// Lógica de interacción para MainPageProperties.xaml
+    /// Lógica de interacción para MainPageUsers.xaml
     /// </summary>
-    public partial class MainPageProperties : Page
+    public partial class MainPageUsers : Page
     {
-        public MainPageProperties()
+        public MainPageUsers()
         {
             InitializeComponent();
-            List<Property> properties = Artificial_database.DummyClass.Properties;
-            lvProperties.ItemsSource = properties;
         }
 
         private void btnViewUsers_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MainPageUsers());
+            NavigationService.GoBack();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
 
-       }
+        }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddProperty());
+            NavigationService.Navigate(new Page2()); //This is AddAdministrator page
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Window1 deleteWindow = new Window1();
-            deleteWindow.Show();
+            Window2 deleteUserWindow = new Window2();
+            deleteUserWindow.Show();
         }
     }
 }

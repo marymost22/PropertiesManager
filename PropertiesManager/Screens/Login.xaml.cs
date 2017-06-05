@@ -19,17 +19,19 @@ namespace PropertiesManager.Screens
     /// <summary>
     /// Lógica de interacción para Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Login : Page
     {
-        public Page1()
+        public Login()
         {
             InitializeComponent();
         }
+
 
         private void btAccept_Click(object sender, RoutedEventArgs e)
         {
             string userID = tbUserID.Text;
             string password = tbPassword.Password;
+
 
             //TODO: When User class created::
             /*
@@ -55,6 +57,8 @@ namespace PropertiesManager.Screens
             }
             
             */
+
+            NavigationService.Navigate(new MainPageProperties());
         }
     }
 }

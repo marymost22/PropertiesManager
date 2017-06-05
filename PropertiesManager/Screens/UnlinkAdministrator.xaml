@@ -1,0 +1,39 @@
+﻿<Page x:Class="PropertiesManager.Screens.UnlinkAdministrator"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PropertiesManager.Screens"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="UnlinkAdministrator">
+
+    <Grid Margin="0,0,-8,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="287*"/>
+            <ColumnDefinition Width="282*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,8,-1" RenderTransformOrigin="0.766,0.59" Background="#FF009688" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="151*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.12"/>
+                    <TranslateTransform X="0.041" Y="-0.24"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <TextBlock x:Name="textBlock" Margin="61,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Text="Choose an administratir from the list and property" HorizontalAlignment="Left" Width="432" FontFamily="Segoe WP" FontSize="16" Grid.Column="1"/>
+            <Button x:Name="button" Content="&#xD;&#xA;UNLINK&#xA;" Margin="356,0,71,62" VerticalAlignment="Bottom" Height="42" Background="#FFF12E10" FontFamily="Segoe WP Black" Grid.Column="1" RenderTransformOrigin="0.505,0.241"/>
+            <ListBox x:Name="listBox" Grid.Column="1" HorizontalAlignment="Left" Height="180" Margin="61,108,0,0" VerticalAlignment="Top" Width="194"/>
+            <ScrollBar x:Name="scrollBar" Grid.Column="1" HorizontalAlignment="Left" Margin="255,108,0,0" VerticalAlignment="Top" Height="180"/>
+
+        </Grid>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="79,67,0,0" Height="33" Width="187" FontWeight="Normal"><Run Text="Choose administrator"/><Run Text=", and propert"/><Run Text="y"/><Run Text=" pair"/></TextBlock>
+        <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Page>
