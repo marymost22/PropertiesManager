@@ -26,27 +26,22 @@ namespace PropertiesManager.Screens
             InitializeComponent();
             foreach (Property property in DummyClass.Properties)
             {
-                cbProperties.Items.Add(property.getName());
+                cbProperties.Items.Add(property.Name);
             }
         }
 
         private void btDelete_Click(object sender, RoutedEventArgs e)
         {
-            Property toDelete =(Property) cbProperties.SelectedItem;
-
-            if (!DummyClass.DeleteProperty(toDelete))
+            string strToDelete = (String)cbProperties.SelectedValue;
+            
+            if (!DummyClass.DeleteProperty(DummyClass.GetPropertyByName(strToDelete)))
             {
                 //TODO: Put red label showing the error
             }
-        }
-
-        /*
-        private void comboBox_Load(object sender, SelectionChangedEventArgs e)
-        {
-            foreach (Property property in Artificial_database.DummyClass.Properties)
+            else
             {
-                cbProperties.Items.Add(property.getName());
+                this.Close();
             }
-        }*/
+        }
     }
 }

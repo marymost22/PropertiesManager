@@ -5,28 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PropertiesManager.Screens"
         mc:Ignorable="d"
-        d:DesignHeight="350" d:DesignWidth="525"
+        d:DesignHeight="300" d:DesignWidth="300"
         Title="Delete one of your administrators" >
-    <Grid Margin="0,0,-8,0">
-            <Grid Margin="0,0.01,7.999,-1" RenderTransformOrigin="0.766,0.59" Background="#FF009688">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="151*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.12"/>
-                        <TranslateTransform X="0.041" Y="-0.24"/>
-                    </TransformGroup>
-                </Grid.RenderTransform>
-                <ComboBox x:Name="comboBox" Margin="43,109,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="133" Grid.Column="1"/>
-                <Button x:Name="button" Content="Delete Administrator" HorizontalAlignment="Right" Margin="0,0,31,61.99" VerticalAlignment="Bottom" Width="144" Height="42" Background="#FFF12E10" FontFamily="Segoe WP Black" Grid.Column="1"/>
-                <TextBlock x:Name="textBlock" Margin="82.131,26.414,52.522,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55.732" Grid.Column="1"><Run Text="Please, sele"/><Run Text="ct "/><Run Text="administrator"/><Run Text=", which you would like to delete from below"/><Run Text=":"/></TextBlock>
-
-            </Grid>
-
-        </Grid>
-    </Window>
+    <Grid>
+        <ComboBox x:Name="cbUsers" Margin="45.025,87.146,0,0" VerticalAlignment="Top" Height="30.74" HorizontalAlignment="Left" Width="133.171"></ComboBox>
+        <Button x:Name="btDelete" Content="Delete property" HorizontalAlignment="Right" Margin="0,0,37.342,69.697" VerticalAlignment="Bottom" Width="130.609" Height="34.594" Background="#FFF12E10" FontFamily="Segoe WP Black" Click="btDelete_Click"/>
+        <TextBlock x:Name="label" Margin="86.731,26.414,52.522,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55.732"><Run Text="Please, sele"/><Run Text="ct property, which you would like to delete from below"/></TextBlock>
+    </Grid>
+</Window>
 

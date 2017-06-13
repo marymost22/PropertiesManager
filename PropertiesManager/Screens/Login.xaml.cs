@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Artificial_database;
+using PropertiesManager.Classes;
 
 namespace PropertiesManager.Screens
 {
@@ -24,6 +25,7 @@ namespace PropertiesManager.Screens
         public Login()
         {
             InitializeComponent();
+            AppController.CurrentUser = null;
         }
 
 
@@ -32,16 +34,14 @@ namespace PropertiesManager.Screens
             string userID = tbUserID.Text;
             string password = tbPassword.Password;
 
-
-            //TODO: When User class created::
-            /*
-            
-            if(DummyClass.Properties.Find(User u=> u.getID() == userID))
-            {
-                if (u.getPassword() == password)
+            User u = DummyClass.userExist(userID, password);
+            if (u != null)
+            { 
+                if (u.Password == password)
                 {
+                    AppController.CurrentUser = u;
                     //We show the Main page, where the properties are shown
-                    MainPage page = new MainPage(); //TODO: CREATE THIS VIEW!!
+                     MainPageProperties page = new MainPageProperties(); 
                     NavigationService.Navigate(page);
                 }
                 else
@@ -55,10 +55,6 @@ namespace PropertiesManager.Screens
                 labelError.Text = "Invalid user. Please, try again";
                 labelError.Visibility = Visibility.Visible;
             }
-            
-            */
-
-            NavigationService.Navigate(new MainPageProperties());
         }
     }
 }

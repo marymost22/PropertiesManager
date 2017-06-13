@@ -9,99 +9,95 @@ namespace AbstractProperty
 
     abstract class Property
     {
-        public enum Existence
-        {
-            no,
-            yes
-        }
 
         static int instances;
 
-        protected string name; //name of property
-        protected int idProperty = 0; //number for identification
-        protected double value; //value in hypothetical currency 
-        protected double area; //physical area measured in square meters
-        protected string location; //address of given property
-        protected double waterExpenses; //monthly outcome regarding water expenses
-        protected double lightExpenses; //monthly outcome regarding light expenses
-        protected double gasExpenses; //monthly outcome regarding gas expenses
-        protected double incomes; //general monthly income
-        protected double outcomes; //general monthly outcome
-        protected double totalIncome; // total income counted since creating property object in program 
-        protected double totalOutcome; //total outcome counter since creating property object in program
+        private string name; //name of property
+        private int idProperty = 0; //number for identification
+        private double value; //value in hypothetical currency 
+        private double area; //physical area measured in square meters
+        private string location; //address of given property
+        private double waterExpenses; //monthly outcome regarding water expenses
+        private double lightExpenses; //monthly outcome regarding light expenses
+        private double gasExpenses; //monthly outcome regarding gas expenses
+        private double incomes; //general monthly income
+        private double outcomes; //general monthly outcome
+        private double totalIncome; // total income counted since creating property object in program 
+        private double totalOutcome; //total outcome counter since creating property object in program
 
-        
-        protected Property()
+        public string Name { get => name; set => name = value; }
+        public int IdProperty { get => idProperty; set => idProperty = value; }
+        public double Value { get => value; set => this.value = value; }
+        public double Area { get => area; set => area = value; }
+        public string Location { get => location; set => location = value; }
+        public double WaterExpenses { get => waterExpenses; set => waterExpenses = value; }
+        public double LightExpenses { get => lightExpenses; set => lightExpenses = value; }
+        public double GasExpenses { get => gasExpenses; set => gasExpenses = value; }
+        public double Incomes { get => incomes; set => incomes = value; }
+        public double Outcomes { get => outcomes; set => outcomes = value; }
+        public double TotalIncome { get => totalIncome; set => totalIncome = value; }
+        public double TotalOutcome { get => totalOutcome; set => totalOutcome = value; }
+
+        public Property (string name, string location, double area)
         {
-            name = "null";
-            idProperty = 0;
-            value = 0;
-            area = 0;
-            location = "null";
-            waterExpenses = 0;
-            lightExpenses = 0;
-            gasExpenses = 0;
-            incomes = 0;
-            outcomes = 0;
-            totalIncome = 0;
-            totalOutcome = 0;
+            this.Name = name;
+            this.Location = location;
+            this.Area = area;
+        }
+
+        public Property(string nam, double val, double ar, string loc, double we, double le, double ge, double inc, double outc)
+        {
+            this.Name = nam;
+            this.IdProperty = ++instances;
+            this.Value = val;
+            this.Area = ar;
+            this.Location = loc;
+            this.WaterExpenses = we;
+            this.LightExpenses = le;
+            this.GasExpenses = ge;
+            this.Incomes = inc;
+            this.Outcomes = outc;
+            this.TotalIncome = inc;
+            this.TotalOutcome = outc;
         }
 
 
-        protected Property(string nam, double val, double ar, string loc, double we, double le, double ge, double inc, double outc)
-        {
-            name = nam;
-            idProperty = ++instances;
-            value = val;
-            area = ar;
-            location = loc;
-            waterExpenses = we;
-            lightExpenses = le;
-            gasExpenses = ge;
-            incomes = inc;
-            outcomes = outc;
-            totalIncome = inc;
-            totalOutcome = outc;
-        }
-
-
-        public int getId()
-        {
-            return idProperty;
-        }
 
         public abstract void Status(); //overloaded function showing status of property
         
 
-        public string getName()
-        {
-            return name;
-        }
 
 
 
         public bool ModifyProperty(string name, string location, double area) //Edits existing information about property, overwrites data in database.
         {
-            if (name != null & location != null & value != 0)
+            if (name != null & location != null & Value != 0)
             { 
-                this.name = name;
-                this.location = location;
-                this.area = area;
+                this.Name = name;
+                this.Location = location;
+                this.Area = area;
                 Artificial_database.DummyClass.ModifyProperty(this);
                 return true;
             }
             return false;
         }
 
-        public void DeleteProperty() //Removes information containing specified property from database, and not showing it anymore in the GUI.
-        {
 
+        public override bool Equals(object obj)
+        {
+            var item = obj as Property;
+
+            if (item == null)
+            {
+                return false;
+            }
+
+            return this.IdProperty.Equals(item.IdProperty);
         }
 
-        public void SearchProperty() //Allows to all the users to search a specific property taking in count some characteristics as : id, area, value, type, owner or administrator
-
+        public override int GetHashCode()
         {
-
+            return this.idProperty.GetHashCode();
         }
     }
 

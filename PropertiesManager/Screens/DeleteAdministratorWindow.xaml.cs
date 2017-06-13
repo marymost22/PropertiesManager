@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Artificial_database;
+using PropertiesManager.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,24 @@ namespace PropertiesManager.Screens
         public Window2()
         {
             InitializeComponent();
+            foreach (User user in DummyClass.Users)
+            {
+                cbUsers.Items.Add(user.Name);
+            }
+        }
+
+        private void btDelete_Click(object sender, RoutedEventArgs e)
+        {
+            string strToDelete = (String)cbUsers.SelectedValue;
+
+            if (!DummyClass.DeleteUser(DummyClass.GetUserByName(strToDelete)))
+            {
+                //TODO: Put red label showing the error
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

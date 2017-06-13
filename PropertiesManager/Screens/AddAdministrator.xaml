@@ -9,13 +9,17 @@
       Title="Page2">
 
     <Grid Margin="0,0,-142.683,0" Background="#FF46997B">
-        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="63.17,60.488,0,0" Text="Name" Background="#FF7EC194"/>
-        <TextBox x:Name="tbSurname" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="63.17,98.536,0,0" Text="Surename" Background="#FF7EC194"/>
-        <TextBox x:Name="tbID" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="63.17,135.852,0,141.148" Text="ID" Background="#FF7EC194"/>
-        <TextBlock x:Name="labelAddAdministrator" Margin="75.755,18.365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Text="Add Administrator" HorizontalAlignment="Left" Width="145.464" FontFamily="Segoe WP" FontSize="16"/>
-        <Button x:Name="btModify" Content="Modify" Margin="0,0,68.756,76.55" VerticalAlignment="Bottom" Height="34.594" Background="#FFF12E10" FontFamily="Segoe WP Black" HorizontalAlignment="Right" Width="130.609" Click="button_Click"/>
-        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="63.17,0,0,26.062" Text="Password" Background="#FF5C956F" Height="23" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="tbContactNumber" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="63.17,0,0,102.094" Text="Contact Number" Background="#FF7EC194" Height="23" VerticalAlignment="Bottom"/>
-        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="63.17,0,0,67.5" Text="Email" Background="#FF7EC194" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Margin="22,58,0,0" Text="Name" Background="#FF7EC194"/>
+        <TextBox x:Name="tbSurname" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Margin="344,58,0,0" Text="Surename" Background="#FF7EC194"/>
+        <TextBox x:Name="tbID" HorizontalAlignment="Left" TextWrapping="Wrap" Width="275" Margin="22,121,0,207" Text="ID" Background="#FF7EC194"/>
+        <TextBlock x:Name="labelAddAdministrator" Margin="22,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Text="Add Administrator" HorizontalAlignment="Left" Width="146" FontFamily="Segoe WP" FontSize="16"/>
+        <ComboBox x:Name="cbType" HorizontalAlignment="Left" Margin="22,0,0,91" Width="275" Background="#FF7EC194" FontFamily="Enter type" VerticalAlignment="Bottom">
+            <ComboBoxItem Content="Administrator" Height="22.261"/>
+            <ComboBoxItem Content="Owner" Height="22.261"/>
+        </ComboBox>
+        <Button x:Name="btnAdd" Content="Add" Margin="0,0,27.683,27" VerticalAlignment="Bottom" Height="34" Background="#FFF12E10" FontFamily="Segoe WP Black" HorizontalAlignment="Right" Width="131" Click="btnAdd_Click"/>
+        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" TextWrapping="Wrap" Width="296" Margin="344,0,0,145" Text="Password" Background="#FF5C956F" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="tbContactNumber" HorizontalAlignment="Left" TextWrapping="Wrap" Width="296" Margin="344,0,0,207" Text="Contact Number" Background="#FF7EC194" Height="23" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" TextWrapping="Wrap" Width="275" Margin="22,0,0,145" Text="Email" Background="#FF7EC194" Height="23" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

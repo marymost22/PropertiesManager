@@ -5,25 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PropertiesManager.Screens"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="525"
-      Title="LogIn">
-
-    <Border Background="#FF009688" Width="525" Height="350">
-
-        <ContentControl HorizontalContentAlignment="Center"
-		VerticalContentAlignment="Center" 
-		HorizontalAlignment="Center" 
-		VerticalAlignment="Center">
-
-            <StackPanel
+      d:DesignHeight="500" d:DesignWidth="600"
+      Title="LogIn"
+      Background="#FF009688">
+    <StackPanel
 			Orientation="Vertical"  
-			UseLayoutRounding="True" 
-			IsHitTestVisible="False" 
 			VerticalAlignment="Center" 
 			HorizontalAlignment="Center" 
                 Margin="12" >
 
-                <TextBlock 
+        <TextBlock 
                     TextWrapping="Wrap" 
 					Text="PropertiesManager ™" 
 					Foreground="White" 
@@ -32,15 +23,15 @@
 					VerticalAlignment="Center" 
 					HorizontalAlignment="Center"/>
 
-                <Viewbox Width="30" Height="30"  Margin="0,0,0,36">
-                    <Canvas Width="24" Height="24">
-                        <Path Data="M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z" Fill="White"/>
-                    </Canvas>
-                </Viewbox>
-                <TextBlock Name="labelError" Visibility="Hidden" FontSize="8" TextWrapping="Wrap" Text="TextBlock" Foreground="#FFFF5722"/>
+        <Viewbox Width="30" Height="30"  Margin="0,0,0,36">
+            <Canvas Width="24" Height="24">
+                <Path Data="M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z" Fill="White"/>
+            </Canvas>
+        </Viewbox>
+        <TextBlock Name="labelError" Visibility="Hidden" FontSize="8" TextWrapping="Wrap" Text="TextBlock" Foreground="#FFFF5722"/>
 
 
-                <TextBox 
+        <TextBox 
                     Name="tbUserID"
 					Text="UserID" 
 					TextWrapping="Wrap" 
@@ -50,7 +41,7 @@
 					FontSize="12" Width="240" 
 					BorderBrush="#00000000"/>
 
-                <PasswordBox 
+        <PasswordBox 
                     Name="tbPassword"
 					Foreground="#FF009688" 
 					VerticalAlignment="Center" 
@@ -60,15 +51,12 @@
 					Margin="0,0,0,0" 
 					BorderBrush="Transparent"/>
 
-                <Button 
+        <Button 
                     Name="btAccept"
 				    Content="Accept" 
 				    Height="24" 
 				    VerticalAlignment="Center" 
 				    HorizontalAlignment="Center" Margin="0,24,0,0" Background="#FFFF5722" Width="72"  Foreground="White" FontSize="12" Click="btAccept_Click"/>
 
-            </StackPanel>
-        </ContentControl>
-    </Border>
-
+    </StackPanel>
 </Page>

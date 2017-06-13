@@ -1,4 +1,6 @@
 ﻿using AbstractProperty;
+using Artificial_database;
+using PropertiesManager.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +26,14 @@ namespace PropertiesManager.Screens
         public MainPageProperties()
         {
             InitializeComponent();
-            List<Property> properties = Artificial_database.DummyClass.Properties;
-            lvProperties.ItemsSource = properties;
+            List<Property> properties = DummyClass.Properties;
+          //  lvProperties.ItemsSource = properties;
+            linkListItems(properties);
+            if (AppController.CurrentUser is Administrator)
+            {
+                btnAdd.Visibility = (Visibility.Hidden);
+                btnDelete.Visibility = Visibility.Hidden;
+            }
         }
 
         private void btnViewUsers_Click(object sender, RoutedEventArgs e)
@@ -35,8 +43,16 @@ namespace PropertiesManager.Screens
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            string nameSrch;
+            string locationSrch;
+            string valueSrch;
 
-       }
+            nameSrch = tbName.Text == "Name" ? null : tbName.Text;
+            locationSrch = tbLocation.Text == "Location" ? null : tbLocation.Text;
+            valueSrch = tbValue.Text == "Value" ? null : tbValue.Text;
+
+            lvProperties.ItemsSource = DummyClass.SearchProperty(nameSrch, locationSrch, valueSrch);
+        }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -47,6 +63,16 @@ namespace PropertiesManager.Screens
         {
             Window1 deleteWindow = new Window1();
             deleteWindow.Show();
+        }
+
+
+        private void linkListItems(List<Property> items)
+        {
+            lvProperties.Items.Clear();
+            foreach (Property item in items)
+            {
+                lvProperties.Items.Add(item);
+            }
         }
     }
 }

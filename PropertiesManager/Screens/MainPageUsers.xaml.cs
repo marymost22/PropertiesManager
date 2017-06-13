@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Artificial_database;
+using PropertiesManager.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,15 @@ namespace PropertiesManager.Screens
         public MainPageUsers()
         {
             InitializeComponent();
+            
+            List<User> users = Artificial_database.DummyClass.Users;
+            lvUsers.ItemsSource = users;
+            if (AppController.CurrentUser is Administrator)
+            {
+                btnAdd.Visibility = (Visibility.Hidden);
+                btnDelete.Visibility = Visibility.Hidden;
+            }
+
         }
 
         private void btnViewUsers_Click(object sender, RoutedEventArgs e)
@@ -32,7 +43,13 @@ namespace PropertiesManager.Screens
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            string nameSrch;
+            string selectedType;
 
+            nameSrch = tbName.Text == "Name" ? null : tbName.Text;
+            selectedType = (String) cbType.SelectedValue;
+
+            lvUsers.ItemsSource = DummyClass.SearchUser(nameSrch,selectedType);
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

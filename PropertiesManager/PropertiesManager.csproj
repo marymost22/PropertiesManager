@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Administrator.cs" />
+    <Compile Include="Classes\AppController.cs" />
+    <Compile Include="Classes\Owner.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Screens\AddProperty.xaml.cs">
       <DependentUpon>AddProperty.xaml</DependentUpon>
@@ -170,6 +173,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
